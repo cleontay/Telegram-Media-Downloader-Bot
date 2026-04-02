@@ -11,6 +11,7 @@ Before you begin, ensure you have the following installed on your system (e.g., 
 * **Python 3.10+**
 * **UV**: [Installaion Guide](https://docs.astral.sh/uv/getting-started/installation/#standalone-installer)
 * **Telegram Bot Token**: Obtain this from [@BotFather](https://t.me/BotFather).
+* **Telegram API ID**: Obtain from [Telegram Developer Login](https://my.telegram.org/auth)
 
 ### Installation
 
@@ -22,7 +23,7 @@ Before you begin, ensure you have the following installed on your system (e.g., 
    
    ```
    
-2. Configuration
+2. **Configuration**
    ```bash
    
    # .env
@@ -31,15 +32,27 @@ Before you begin, ensure you have the following installed on your system (e.g., 
    
    ```
    
-3. Usage
+3. **Export uv requirements**
    ```bash
    
-   uv sync
-   uv run python PTBot.py
+   uv export --no-hashes --format requirements-txt > ./Docker/requirements.txt
+
+   ```
    
+4. **Build Image**
+   ```bash
+
+   docker build -t <appname>:<version> -f Docker/Dockerfile
+
    ```
 
+5. **Docker compose configuration**
+   ```bash
+   
+   docker compose up --build -d
+
+   ```
+   
+6. **Usage**
    - Start a chat with the Telegram Bot
    - Type "/" and start using
-
-## ![Docker](https://shields.io) Getting Started
