@@ -16,8 +16,8 @@ Before you begin, ensure you have the following installed on your system (e.g., 
 1. **Clone the Repository:**
    ```bash
    
-   git clone [Telegram-Media-Downloader-Bot](https://github.com/cleontay/Telegram-Media-Downloader-Bot.git).
-   cd your-repo-name
+   git clone https://github.com/cleontay/Telegram-Media-Downloader-Bot.git
+   cd YTBot
    
    ```
    
