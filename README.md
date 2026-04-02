@@ -16,7 +16,7 @@ Before you begin, ensure you have the following installed on your system (e.g., 
 1. **Clone the Repository:**
    ```bash
    
-   git clone [https://github.com/yourusername/your-repo-name.git](https://github.com/yourusername/your-repo-name.git)
+   git clone [https://github.com/cleontay/Telegram-Media-Downloader-Bot.git](https://github.com/cleontay/Telegram-Media-Downloader-Bot.git)
    cd your-repo-name
    
    ```
