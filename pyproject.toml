@@ -1,0 +1,12 @@
+[project]
+name = "ytbot"
+version = "0.1.0"
+description = "Download Youtube Video and Audio using telegram"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "pytelegrambotapi>=4.29.1",
+    "python-dotenv>=1.2.1",
+    "validators>=0.35.0",
+    "yt-dlp>=2026.2.21",
+]

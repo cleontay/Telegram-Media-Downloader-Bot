@@ -1,0 +1,34 @@
+services:
+    telegram-api-server:
+        image: aiogram/telegram-bot-api
+        container_name: telegram-api-server
+        environment:
+            TELEGRAM_API_ID: "XXXXXXXXXX"
+            TELEGRAM_API_HASH: "XXXXXXXXXX"
+        command: --local --api-id=XXXXXXXXXX --api-hash=XXXXXXXXXX
+        networks:
+            - ytbot-net
+    ytbot:
+        image: <username>/<image-name>:latest
+        container_name: ytbot
+        environment:
+            TELEGRAM_API_URL: "http://telegram-api-server:8081"
+            PATH: "/usr/local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+            LANG: "C.UTF-8"
+            GPG_KEY: "7169605F62C751356D054A26A821E680E5FA6305"
+            PYTHON_VERSION: "3.12.13"
+            PYTHON_SHA256: "c08bc65a81971c1dd5783182826503369466c7e67374d1646519adf05207b684"
+            PUID: "1000"
+            UID: "1000"
+            USER_ID: "1000"
+            GROUP_ID: "10"
+            PGID: "10"
+            GID: "10"
+        networks:
+            - ytbot-net
+        command:
+            sh -c "uv run python /app/YTBot.py"
+        restart: always
+networks:
+    ytbot-net:
+        driver: bridge
