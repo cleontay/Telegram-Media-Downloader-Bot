@@ -9,6 +9,7 @@ A powerful Telegram bot built with Python that leverages **yt-dlp** to download 
 ### Prerequisites
 Before you begin, ensure you have the following installed on your system (e.g., Ubuntu, macOS, or Windows):
 * **Python 3.10+**
+* **UV**: [Installaion Guide](https://docs.astral.sh/uv/getting-started/installation/#standalone-installer)
 * **Telegram Bot Token**: Obtain this from [@BotFather](https://t.me/BotFather).
 
 ### Installation
@@ -21,11 +22,24 @@ Before you begin, ensure you have the following installed on your system (e.g., 
    
    ```
    
-2. Set Up Virtual Environment (UV)
+2. Configuration
    ```bash
-   git clone [https://github.com/yourusername/your-repo-name.git](https://github.com/yourusername/your-repo-name.git)
-   cd your-repo-name
+   
+   # .env
+   USERID=1234567890
+   BOTTOKEN=XXXXX:YYYYYYYYY
+   
    ```
-3. Install Dependencies
-4. Configuration
-5. Usage
+   
+3. Usage
+   ```bash
+   
+   uv sync
+   uv run python PTBot.py
+   
+   ```
+
+   - Start a chat with the Telegram Bot
+   - Type "/" and start using
+
+## [<img src="https://img.shields.io/badge/dockerhub-images-important.svg?logo=LOGO">](<LINK>) Getting Started
