@@ -42,4 +42,4 @@ Before you begin, ensure you have the following installed on your system (e.g., 
    - Start a chat with the Telegram Bot
    - Type "/" and start using
 
-## ![Docker](https://img.shields.io/badge/docker-%232496ED.svg?style=for-the-badge&logo=docker&logoColor=white) Getting Started
+## ![Docker Image Version](https://shields.io) Getting Started
